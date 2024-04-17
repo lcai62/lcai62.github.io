@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+.nav-link, .navbar-brand {
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    color: white !important;
+}
+
+.nav-link.active > .highlight {
+    color: #ca8bff !important;
+    transition: color 0.3s;
+}
+
+.navbar {
+    padding-right: 2rem;
+    padding-top: 1.2rem;
+}
+
+.highlight {
+    color: #FF9A3C;
+    transition: color 0.3s;
+}
