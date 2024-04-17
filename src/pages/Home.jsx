@@ -18,6 +18,9 @@ const Home = () => {
     const [introDone, setIntroDone] = useState(false);
     const [bodyDone, setBodyDone] = useState(false);
     const [body2Done, setBody2Done] = useState(false);
+    const [body3Done, setBody3Done] = useState(false);
+
+    const [showButtons, setShowButtons] = useState(false);
 
     useEffect(() => {
         let i = 0;
@@ -100,6 +103,7 @@ const Home = () => {
                     j++;
                 } else {
                     clearInterval(bodyTimer);
+                    setBody3Done(true);
                 }
             }, 35);
         }
@@ -112,19 +116,41 @@ const Home = () => {
 
     }, [body2Done]);
 
+
+    useEffect(() => {
+
+        if (body3Done) {
+            setTimeout(() => {
+                setShowButtons(true);
+            }, 200);
+        }
+
+    }, [body3Done]);
+
     return(
         <>
             <NavBar/>
             <div className="d-flex text-white bg-black flex-column justify-content-start" style={{ height: "100vh", paddingTop: "11rem", paddingLeft: "14rem" }}>
+
                 <div className="typewriter">
                     <p className="intro display-3">{intro}{!introDone && <span className="cursor"></span>}</p>
                 </div>
+
                 <div className="fs-4">{body}{introDone && !bodyDone && <span className="cursor"></span>}</div>
-                <div className="fs-4">{body2}{bodyDone && !body2Done && <span className="cursor"></span>}
+                <div className="fs-4 mb-4">{body2}{bodyDone && !body2Done && <span className="cursor"></span>}
                     <span className="highlight">{body3}{body2Done && <span className="cursor"></span>}</span>
                 </div>
 
-
+                {/* set fade in when showing buttons so animation is not missed */}
+                <div className={`d-flex mt-5 gap-4 ${showButtons ? "fadeIn" : ""}`}>
+                    {
+                        showButtons &&
+                        <>
+                            <a href="#resume" className="button button-resume">Resume</a>
+                            <a href="#projects" className="button button-projects">Projects</a>
+                        </>
+                    }
+                </div>
 
             </div>
 

@@ -20,3 +20,41 @@
     height: 4rem;
     padding-left: 0.2rem;
 }
+
+.button {
+
+    border: none;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    letter-spacing: 0.2rem;
+}
+
+.button-resume {
+    background-color: #FF9A3C;
+    padding: 0.5rem 4rem;
+    color: black;
+}
+
+.button-projects {
+    background-color: black;
+    padding: 0.5rem 3rem;
+    color: #FF9A3C;
+    border: #FF9A3C 2px solid;
+    font-size: 1rem;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {opacity: 1;}
+}
+
+.fadeIn {
+    animation: fadeIn 1s ease-out;
+}
