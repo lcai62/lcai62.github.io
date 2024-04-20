@@ -20,7 +20,7 @@ const Home = () => {
                     </div>
 
                     <div className="project-languages d-flex flex-row">
-                        <hr className="vertical-line" />
+                        <hr className="vertical-line " />
 
                         <div className="d-flex flex-column">
                             <p className="languages pt-3">C, C++, MPI, OpenMP</p>
@@ -39,7 +39,7 @@ const Home = () => {
                                     <div className="d-flex flex-row ms-5">
                                         <hr className="vertical-line" />
 
-                                        <a className="ms-5">asdlfkj</a>
+                                        <a className="ms-5 button button-view">View Project</a>
                                     </div>
 
                                 </div>

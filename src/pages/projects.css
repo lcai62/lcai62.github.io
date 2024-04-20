@@ -22,3 +22,31 @@ hr {
     width: 1px;
     background-color: white;
 }
+
+.button {
+    border: none;
+    border-radius: 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+    letter-spacing: 0.1rem;
+}
+
+.button:hover {
+    background-color: #2c2c2c;
+    /*box-shadow: white 2px 2px 2px;*/
+}
+
+
+.button-view {
+    background-color: black;
+    padding: 0.5rem 2rem;
+    color: #FFF;
+    border: #FFF 2px solid;
+}
+
+.project-languages {
+    opacity: 85%;
+}
