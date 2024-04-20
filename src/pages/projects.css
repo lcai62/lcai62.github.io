@@ -23,7 +23,7 @@ hr {
     background-color: white;
 }
 
-.button {
+.projects-button {
     border: none;
     border-radius: 2rem;
     font-size: 1rem;
@@ -34,13 +34,13 @@ hr {
     letter-spacing: 0.1rem;
 }
 
-.button:hover {
+.projects-button:hover {
     background-color: #2c2c2c;
     /*box-shadow: white 2px 2px 2px;*/
 }
 
 
-.button-view {
+.projects-button-view {
     background-color: black;
     padding: 0.5rem 2rem;
     color: #FFF;

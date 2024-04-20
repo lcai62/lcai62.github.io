@@ -10,10 +10,10 @@ function NavBar() {
             <Navbar className="justify-content-around bg-black"  data-bs-theme="dark">
                 <Container fluid>
                     <Nav className="ms-auto gap-3">
-                        <Nav.Link href="#/about"><span className="highlight">01</span> About</Nav.Link>
+                        <Nav.Link href="#/"><span className="highlight">01</span> About</Nav.Link>
                         <Nav.Link href="#/projects"><span className="highlight">02</span> Projects</Nav.Link>
-                        <Nav.Link href="#/contact"><span className="highlight">03</span> Contact</Nav.Link>
-                        <Nav.Link href="">leoncai@outlook.com</Nav.Link>
+                        <Nav.Link href="mailto:leoncai@outlook.com"><span className="highlight">03</span> Contact</Nav.Link>
+                        <Nav.Link href="mailto:leoncai@outlook.com">leoncai@outlook.com</Nav.Link>
                     </Nav>
                 </Container>
 

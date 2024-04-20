@@ -146,8 +146,9 @@ const Home = () => {
                     {
                         showButtons &&
                         <>
-                            <a href="#/resume" className="button button-resume">Resume</a>
+                            <a href="#" className="button button-resume">Resume</a>
                             <a href="#/projects" className="button button-projects">Projects</a>
+                            <p> {` { Website in development } `} </p>
                         </>
                     }
                 </div>
