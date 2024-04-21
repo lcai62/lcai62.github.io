@@ -3,11 +3,12 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './projects.css'
 import github from '../assets/github.png';
 import Footer from "../components/Footer";
+import Container from "react-bootstrap/Container";
 
 const Home = () => {
 
     return (
-        <>
+        <div className="bg-black">
             <NavBar/>
             <div
                 className="projects-container d-flex text-white bg-black flex-column justify-content-start align-items-start"
@@ -17,13 +18,13 @@ const Home = () => {
                     height: "100%",
                     paddingTop: "4rem",
                     paddingBottom: "10rem",
-                    paddingLeft: "14rem",
+                    paddingRight: "12vw",
                     gap: "130px"
                 }}>
 
-                <h1 className="projects fadeIn">Projects</h1>
+                <h1 className="projects fadeIn" style={{ marginLeft: "10vw"}}>Projects</h1>
 
-                <div className="d-flex flex-column justify-content-start align-items-start gap-5 delayFadeIn">
+                <div className="d-flex flex-column justify-content-start align-items-start gap-5 delayFadeIn"  style={{ marginLeft: "12vw"}}>
 
                     <div className="project-container d-flex flex-column ms-5">
 
@@ -124,7 +125,7 @@ const Home = () => {
 
             </div>
             <Footer/>
-        </>
+        </div>
     )
 };
 

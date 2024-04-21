@@ -25,7 +25,8 @@ function Footer() {
                     <a className="footer-image" href="https://www.linkedin.com/in/lcai62" target="_blank" rel="noreferrer"><img src={linkedin} alt="linkedin" style={{width: "25px", height: "25px"}}/></a>
                     <a className="footer-image" href="mailto:leoncai@outlook.com"><img src={mail} alt="mail" style={{width: "25px", height: "25px"}}/></a>
                 </div>
-                <Nav className="footer-links justify-content-center pb-3 text-white bg-black">
+                <div className="footer-links d-flex flex-row justify-content-center pb-3 text-white bg-black">
+
 
                     <NavItem>
                         <NavLink href="/#/" onClick={scrollToTop} className="nav-link px-2 footer-text">Home</NavLink>
@@ -40,7 +41,7 @@ function Footer() {
                         <NavLink href="mailto:leoncai@outlook.com" className="px-2 footer-text">Contact</NavLink>
                     </NavItem>
 
-                </Nav>
+                </div>
                 <p className="text-center text-white bg-black m-0 py-3">Copyright © 2024 by Leon Cai</p>
             </Container>
 

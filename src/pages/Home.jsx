@@ -144,7 +144,7 @@ const Home = () => {
     return(
         <>
             <NavBar />
-            <div className="d-flex text-white bg-black flex-column justify-content-start" style={{ height: "100vh", paddingTop: "11rem", paddingLeft: "14rem" }}>
+            <div className="d-flex text-white bg-black flex-column justify-content-start" style={{ height: "100vh", paddingTop: "11rem", paddingLeft: "14vw" }}>
 
                 <div className={`typewriter ${textFade ? "fadeIn" : ""}`}>
                     <p className="intro display-3">{intro}{!introDone && !textFade && <span className="cursor"></span>}</p>
