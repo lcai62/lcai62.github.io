@@ -15,6 +15,8 @@ const Home = () => {
     const [body2, setBody2] = useState("");
     const [body3, setBody3] = useState("");
 
+    const [textFade, setTextFade] = useState(false);
+
     const [introDone, setIntroDone] = useState(false);
     const [bodyDone, setBodyDone] = useState(false);
     const [body2Done, setBody2Done] = useState(false);
@@ -25,6 +27,16 @@ const Home = () => {
     useEffect(() => {
         let i = 0;
         let curr_intro = "";
+
+        if (localStorage.getItem("introDone") === "true") {
+            setIntro(intro_text);
+            setBody(body_text);
+            setBody2(body_text_2);
+            setBody3(body_text_3);
+            setShowButtons(true);
+            setTextFade(true);
+            return;
+        }
         const timer = setInterval(() => {
             if (i < intro_text.length) {
                 curr_intro += intro_text.charAt(i);
@@ -33,6 +45,7 @@ const Home = () => {
             } else {
                 clearInterval(timer);
                 setIntroDone(true);
+                localStorage.setItem("introDone", "true");
                 console.log("set intro done to true")
             }
         }, 100);
@@ -132,13 +145,16 @@ const Home = () => {
             <NavBar/>
             <div className="d-flex text-white bg-black flex-column justify-content-start" style={{ height: "100vh", paddingTop: "11rem", paddingLeft: "14rem" }}>
 
-                <div className="typewriter">
-                    <p className="intro display-3">{intro}{!introDone && <span className="cursor"></span>}</p>
+                <div className={`typewriter ${textFade ? "fadeIn" : ""}`}>
+                    <p className="intro display-3">{intro}{!introDone && !textFade && <span className="cursor"></span>}</p>
                 </div>
 
-                <div className="fs-4">{body}{introDone && !bodyDone && <span className="cursor"></span>}</div>
-                <div className="fs-4 mb-4">{body2}{bodyDone && !body2Done && <span className="cursor"></span>}
-                    <span className="highlight">{body3}{body2Done && <span className="cursor"></span>}</span>
+                <div className={`fs-4 typewriter ${textFade ? "fadeIn" : ""}`}>{body}{introDone && !bodyDone && <span className="cursor"></span>}</div>
+                <div className={`fs-4 mb-4 typewriter ${textFade ? "fadeIn" : ""}`}>{body2}{bodyDone && !body2Done && <span className="cursor"></span>}
+                    <span className="highlight">
+                        {body3}
+                        {(body2Done || textFade)&& <span className="cursor"></span>}
+                    </span>
                 </div>
 
                 {/* set fade in when showing buttons so animation is not missed */}
