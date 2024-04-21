@@ -2,6 +2,7 @@ import NavBar from "../components/Nav";
 import 'bootstrap/dist/css/bootstrap.css';
 import './projects.css'
 import github from '../assets/github.png';
+import Footer from "../components/Footer";
 
 const Home = () => {
 
@@ -20,9 +21,9 @@ const Home = () => {
                     gap: "130px"
                 }}>
 
-                <h1 className="projects">Projects</h1>
+                <h1 className="projects fadeIn">Projects</h1>
 
-                <div className="d-flex flex-column justify-content-start align-items-start gap-5">
+                <div className="d-flex flex-column justify-content-start align-items-start gap-5 delayFadeIn">
 
                     <div className="project-container d-flex flex-column ms-5">
 
@@ -122,7 +123,7 @@ const Home = () => {
 
 
             </div>
-
+            <Footer/>
         </>
     )
 };

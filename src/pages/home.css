@@ -22,7 +22,6 @@
 }
 
 .button {
-
     border: none;
     border-radius: 2rem;
     font-size: 1.2rem;
@@ -37,6 +36,8 @@
     background-color: #FF9A3C;
     padding: 0.5rem 4rem;
     color: black;
+    box-shadow: 0 0 0 2px #FF9A3C;
+    transition: 0.3s;
 }
 
 .button-projects {
@@ -44,7 +45,19 @@
     padding: 0.5rem 3rem;
     color: #FF9A3C;
     border: #FF9A3C 2px solid;
-    font-size: 1rem;
+    font-size: 1.1rem;
+}
+
+.button-resume:hover {
+    background-color: #bd6f20;
+    box-shadow: 0 0 0 2px #bd6f20;
+    transition: 0.3s;
+}
+
+.button-projects:hover {
+    border: #bd6f20 2px solid;
+    color: #bd6f20;
+    transition: 0.3s;
 }
 
 @keyframes fadeIn {
@@ -57,4 +70,22 @@
 
 .fadeIn {
     animation: fadeIn 1s ease-out;
+}
+
+@keyframes delayFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    50% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    100% {opacity: 1;}
+}
+
+.delayFadeIn {
+    animation: delayFadeIn 2s ease-out;
 }

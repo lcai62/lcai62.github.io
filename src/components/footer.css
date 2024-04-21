@@ -1,0 +1,14 @@
+.footer-text {
+    color: white !important;
+}
+
+.footer-links {
+    border-bottom: #c3c3c3 1px solid;
+    margin-left: 40rem;
+    margin-right: 40rem;
+}
+
+.footer-image:hover {
+    opacity: 0.65;
+    transition: opacity 0.3s;
+}

@@ -7,6 +7,11 @@
     transition: color 0.3s;
 }
 
+.nav-link:hover, .navbar-brand:hover {
+    opacity: 0.75;
+    transition: opacity 0.3s;
+}
+
 .nav-link.active > .highlight {
     color: #ca8bff !important;
     transition: color 0.3s;

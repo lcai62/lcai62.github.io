@@ -2,6 +2,7 @@ import NavBar from "../components/Nav";
 import "./home.css"
 import 'bootstrap/dist/css/bootstrap.css';
 import {useEffect, useState} from "react";
+import Footer from "../components/Footer";
 
 const Home = () => {
 
@@ -142,15 +143,15 @@ const Home = () => {
 
     return(
         <>
-            <NavBar/>
+            <NavBar />
             <div className="d-flex text-white bg-black flex-column justify-content-start" style={{ height: "100vh", paddingTop: "11rem", paddingLeft: "14rem" }}>
 
                 <div className={`typewriter ${textFade ? "fadeIn" : ""}`}>
                     <p className="intro display-3">{intro}{!introDone && !textFade && <span className="cursor"></span>}</p>
                 </div>
 
-                <div className={`fs-4 typewriter ${textFade ? "fadeIn" : ""}`}>{body}{introDone && !bodyDone && <span className="cursor"></span>}</div>
-                <div className={`fs-4 mb-4 typewriter ${textFade ? "fadeIn" : ""}`}>{body2}{bodyDone && !body2Done && <span className="cursor"></span>}
+                <div className={`fs-4 typewriter ${textFade ? "delayFadeIn" : ""}`}>{body}{introDone && !bodyDone && <span className="cursor"></span>}</div>
+                <div className={`fs-4 mb-4 typewriter ${textFade ? "delayFadeIn" : ""}`}>{body2}{bodyDone && !body2Done && <span className="cursor"></span>}
                     <span className="highlight">
                         {body3}
                         {(body2Done || textFade)&& <span className="cursor"></span>}
@@ -158,19 +159,18 @@ const Home = () => {
                 </div>
 
                 {/* set fade in when showing buttons so animation is not missed */}
-                <div className={`d-flex mt-5 gap-4 ${showButtons ? "fadeIn" : ""}`}>
+                <div className={`d-flex mt-5 gap-4 ${showButtons ? "delayFadeIn" : ""}`}>
                     {
                         showButtons &&
                         <>
-                            <a href="#" className="button button-resume">Resume</a>
-                            <a href="#/projects" className="button button-projects">Projects</a>
+                            <a href="/#" className="button button-resume">Resume</a>
+                            <a href="/#/projects" className="button button-projects">Projects</a>
                             <p> {` { Website in development } `} </p>
                         </>
                     }
                 </div>
 
             </div>
-
         </>
     )
 };
