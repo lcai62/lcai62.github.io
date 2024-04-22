@@ -18,11 +18,10 @@
 }
 
 .navbar {
-    padding-right: 2rem;
-    padding-left: 2rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
     padding-top: 1.2rem;
     transition: color 0.3s;
-    min-width: fit-content;
 }
 
 .highlight {

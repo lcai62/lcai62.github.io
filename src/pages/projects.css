@@ -50,3 +50,58 @@ hr {
 .project-languages {
     opacity: 85%;
 }
+
+@media screen and (max-width: 1500px) {
+    .project-parent-container {
+        margin-left: 10vw !important;
+    }
+
+    .projects-container {
+        gap: 7vh !important;
+    }
+
+    .project-container {
+        margin-left: 0 !important;
+    }
+
+    .languages, .description-container {
+        margin-left: 7vw;
+    }
+
+    .project-description {
+        margin-left: 7vw !important;
+    }
+
+    .project-button-container {
+        margin-left: 7vw !important;
+    }
+
+    .projects-button {
+        margin-left: 7vw !important;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+    .projects-container, .projects-button {
+        font-size: 2vw;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .projects-container, .projects-button {
+        font-size: 2.4vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .projects-container, .projects-button {
+        font-size: 2.8vw;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .projects-container, .projects-button {
+        font-size: 0.9rem;
+    }
+}

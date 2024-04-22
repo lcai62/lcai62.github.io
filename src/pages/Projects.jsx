@@ -24,7 +24,7 @@ const Home = () => {
 
                 <h1 className="projects fadeIn" style={{ marginLeft: "10vw"}}>Projects</h1>
 
-                <div className="d-flex flex-column justify-content-start align-items-start gap-5 delayFadeIn"  style={{ marginLeft: "12vw"}}>
+                <div className="project-parent-container d-flex flex-column justify-content-start align-items-start gap-5 delayFadeIn"  style={{ marginLeft: "12vw"}}>
 
                     <div className="project-container d-flex flex-column ms-5">
 
@@ -43,7 +43,7 @@ const Home = () => {
                                     <hr className="vertical-line"/>
 
                                     <div className="d-flex flex-column">
-                                        <p className="ms-5">
+                                        <p className="project-description ms-5">
                                             -&nbsp;&nbsp;Achieved 1000x speed increase in image processing tasks through
                                             CUDA-based GPU optimizations.<br/>
                                             -&nbsp;&nbsp;Conducted detailed performance analysis using NVIDIA Nsight and
@@ -55,7 +55,7 @@ const Home = () => {
                                             memory accesses with hardware constraints.
                                         </p>
 
-                                        <div className="d-flex flex-row ms-5">
+                                        <div className="project-button-container d-flex flex-row ms-5">
                                             <hr className="vertical-line"/>
 
                                             <a className="ms-5 projects-button projects-button-view">View Project</a>
@@ -91,7 +91,7 @@ const Home = () => {
                                     <hr className="vertical-line"/>
 
                                     <div className="d-flex flex-column">
-                                        <p className="ms-5">
+                                        <p className="project-description ms-5">
                                             -&nbsp;&nbsp;Achieved a 200x speedup, reducing complexity from
                                             O(n<sup>2</sup>) to O(n) by optimizing computational algorithms.<br/>
                                             -&nbsp;&nbsp;Designed communication protocols among distributed nodes to
@@ -102,7 +102,7 @@ const Home = () => {
                                             optimize memory access patterns.
                                         </p>
 
-                                        <div className="d-flex flex-row ms-5">
+                                        <div className="project-button-container d-flex flex-row ms-5">
                                             <hr className="vertical-line"/>
 
                                             <a className="ms-5 projects-button projects-button-view">View Project</a>
