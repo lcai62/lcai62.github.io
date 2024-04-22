@@ -51,6 +51,7 @@ hr {
     opacity: 85%;
 }
 
+
 @media screen and (max-width: 1500px) {
     .project-parent-container {
         margin-left: 10vw !important;

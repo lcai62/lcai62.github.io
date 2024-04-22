@@ -4,6 +4,7 @@ import './projects.css'
 import github from '../assets/github.png';
 import Footer from "../components/Footer";
 import Container from "react-bootstrap/Container";
+import Project from "../components/Project";
 
 const Home = () => {
 
@@ -26,103 +27,54 @@ const Home = () => {
 
                 <div className="project-parent-container d-flex flex-column justify-content-start align-items-start gap-5 delayFadeIn"  style={{ marginLeft: "12vw"}}>
 
-                    <div className="project-container d-flex flex-column ms-5">
-
-                        <div className="project-header d-flex flex-row align-items-center">
-                            <img src={github} alt="Project Logo" style={{width: "60px", height: "60px"}}/>
-                            <h2 className="ms-4 pt-2">GPU-Accelerated Image Processing with CUDA</h2>
-                        </div>
-
-                        <div className="project-languages d-flex flex-row">
-                            <hr className="vertical-line "/>
-
-                            <div className="d-flex flex-column">
-                                <p className="languages pt-3">C, C++, CUDA<i>&nbsp;&nbsp;|&nbsp;&nbsp;April 2024</i></p>
-
-                                <div className="description-container d-flex flex-row">
-                                    <hr className="vertical-line"/>
-
-                                    <div className="d-flex flex-column">
-                                        <p className="project-description ms-5">
-                                            -&nbsp;&nbsp;Achieved 1000x speed increase in image processing tasks through
-                                            CUDA-based GPU optimizations.<br/>
-                                            -&nbsp;&nbsp;Conducted detailed performance analysis using NVIDIA Nsight and
-                                            profiling tools, identifying critical bottlenecks. .<br/>
-                                            -&nbsp;&nbsp;Refined reduction kernels by employing atomic instructions and
-                                            warp-level techniques including memory coalescing to improve scalability
-                                            across blocks. <br/>
-                                            -&nbsp;&nbsp;Leveraged spacial and temporal locality to strategically align
-                                            memory accesses with hardware constraints.
-                                        </p>
-
-                                        <div className="project-button-container d-flex flex-row ms-5">
-                                            <hr className="vertical-line"/>
-
-                                            <a className="ms-5 projects-button projects-button-view">View Project</a>
-                                        </div>
-
-                                    </div>
-
-                                </div>
+                    <Project
+                        title="GPU-Accelerated Image Processing with CUDA"
+                        description={[
+                            "Achieved 1000x speed increase in image processing tasks through CUDA-based GPU optimizations.",
+                            "Conducted detailed performance analysis using NVIDIA Nsight and profiling tools, identifying critical bottlenecks.",
+                            "Refined reduction kernels by employing atomic instructions and warp-level techniques including memory coalescing to improve scalability across blocks.",
+                            "Leveraged spacial and temporal locality to strategically align memory accesses with hardware constraints."
+                        ]}
+                        languages="C, C++, CUDA"
+                        date="April 2024"
+                    />
+                    <Project
+                        title="Distributed Systems Particles Simulation"
+                        description={[
+                            "Achieved a 200x speedup, reducing complexity from O(n^2) to O(n) by optimizing computational algorithms.",
+                            "Designed communication protocols among distributed nodes to ensure synchronization and minimize latency.",
+                            "Implemented optimization techniques including binning to optimize performance by reducing unnecessary computations.",
+                            "Refined cache-friendly algorithms to enhance data locality and optimize memory access patterns."
+                        ]}
+                        languages="C, C++, MPI, OpenMP"
+                        date="May 2024"
+                    />
 
 
-                            </div>
+                    <Project
+                        title="FUSE Filesystems: VSFS"
+                        description={[
+                        ]}
+                        languages="C, FUSE Filesystems"
+                        date="December 2023"
+                    />
 
+                    <Project
+                        title="Virtual Memory Page Translations and Replacement Policies"
+                        description={[
+                        ]}
+                        languages="C, Linux, Paging"
+                        date="November 2023"
+                    />
 
-                        </div>
-
-                    </div>
-
-                    <div className="project-container d-flex flex-column ms-5">
-
-                        <div className="project-header d-flex flex-row align-items-center">
-                            <img src={github} alt="Project Logo" style={{width: "60px", height: "60px"}}/>
-                            <h2 className="ms-4 pt-2">Distributed Systems Particles Simulation</h2>
-                        </div>
-
-                        <div className="project-languages d-flex flex-row">
-                            <hr className="vertical-line "/>
-
-                            <div className="d-flex flex-column">
-                                <p className="languages pt-3">C, C++, MPI, OpenMP<i>&nbsp;&nbsp;|&nbsp;&nbsp;May 2024</i>
-                                </p>
-
-                                <div className="description-container d-flex flex-row">
-                                    <hr className="vertical-line"/>
-
-                                    <div className="d-flex flex-column">
-                                        <p className="project-description ms-5">
-                                            -&nbsp;&nbsp;Achieved a 200x speedup, reducing complexity from
-                                            O(n<sup>2</sup>) to O(n) by optimizing computational algorithms.<br/>
-                                            -&nbsp;&nbsp;Designed communication protocols among distributed nodes to
-                                            ensure synchronization and minimize latency.<br/>
-                                            -&nbsp;&nbsp;Implemented optimization techniques including binning to
-                                            optimize performance by reducing unnecessary computations.<br/>
-                                            -&nbsp;&nbsp;Refined cache-friendly algorithms to enhance data locality and
-                                            optimize memory access patterns.
-                                        </p>
-
-                                        <div className="project-button-container d-flex flex-row ms-5">
-                                            <hr className="vertical-line"/>
-
-                                            <a className="ms-5 projects-button projects-button-view">View Project</a>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-
-                            </div>
-
-
-                        </div>
-
-                    </div>
-
+                    <Project
+                        title="Thread Management and Synchronization Library"
+                        description={[
+                        ]}
+                        languages="C, Interrupts, Multithreading"
+                        date="October 2023"
+                    />
                 </div>
-
-
             </div>
             <Footer/>
         </div>
