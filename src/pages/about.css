@@ -1,0 +1,18 @@
+
+
+
+@media screen and (max-width: 1200px) {
+    .profile-picture {
+        width: 30vw;
+        height: 30vw;
+    }
+}
+
+
+@media screen and (max-width: 786px) {
+
+    .profile-picture {
+        display: none;
+    }
+
+}

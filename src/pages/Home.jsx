@@ -144,17 +144,27 @@ const Home = () => {
     return(
         <>
             <NavBar />
-            <div className="d-flex text-white bg-black flex-column justify-content-start" style={{ minWidth: "fit-content", height: "100vh", paddingTop: "24vh", paddingLeft: "14vw", paddingRight: "14vw"}}>
+            <div className="d-flex text-white bg-black flex-column justify-content-start" style={{
+                minWidth: "fit-content",
+                height: "100vh",
+                paddingTop: "24vh",
+                paddingLeft: "14vw",
+                paddingRight: "14vw"
+            }}>
 
                 <div className={`typewriter ${textFade ? "fadeIn" : ""}`}>
-                    <p className="intro display-3">{intro}{!introDone && !textFade && <span className="cursor"></span>}</p>
+                    <p className="intro display-3">{intro}{!introDone && !textFade &&
+                        <span className="cursor"></span>}</p>
                 </div>
 
-                <div className={`fs-4 typewriter ${textFade ? "delayFadeIn" : ""}`}>{body}{introDone && !bodyDone && <span className="cursor"></span>}</div>
-                <div className={`fs-4 mb-4 typewriter ${textFade ? "delayFadeIn" : ""}`}>{body2}{bodyDone && !body2Done && <span className="cursor"></span>}
+                <div className={`fs-4 typewriter ${textFade ? "delayFadeIn" : ""}`}>{body}{introDone && !bodyDone &&
+                    <span className="cursor"></span>}</div>
+                <div
+                    className={`fs-4 mb-4 typewriter ${textFade ? "delayFadeIn" : ""}`}>{body2}{bodyDone && !body2Done &&
+                    <span className="cursor"></span>}
                     <span className="highlight">
                         {body3}
-                        {(body2Done || textFade)&& <span className="cursor"></span>}
+                        {(body2Done || textFade) && <span className="cursor"></span>}
                     </span>
                 </div>
 
@@ -165,9 +175,11 @@ const Home = () => {
                         <>
                             <a href="/#" className="button button-resume">Resume</a>
                             <a href="/#/projects" className="button button-projects">Projects</a>
+
                         </>
                     }
                 </div>
+                <p className="mt-5">{`{ Website in development }`}</p>
 
             </div>
         </>
