@@ -144,7 +144,7 @@ const Home = () => {
     return(
         <>
             <NavBar />
-            <div className="d-flex text-white bg-black flex-column justify-content-start" style={{ height: "100vh", paddingTop: "11rem", paddingLeft: "14vw" }}>
+            <div className="d-flex text-white bg-black flex-column justify-content-start" style={{ minWidth: "fit-content", height: "100vh", paddingTop: "24vh", paddingLeft: "14vw", paddingRight: "14vw"}}>
 
                 <div className={`typewriter ${textFade ? "fadeIn" : ""}`}>
                     <p className="intro display-3">{intro}{!introDone && !textFade && <span className="cursor"></span>}</p>
@@ -159,13 +159,12 @@ const Home = () => {
                 </div>
 
                 {/* set fade in when showing buttons so animation is not missed */}
-                <div className={`d-flex mt-5 gap-4 ${showButtons ? "delayFadeIn" : ""}`}>
+                <div id="home-buttons-container" className={`d-flex mt-5 gap-4 ${showButtons ? "delayFadeIn" : ""}`}>
                     {
                         showButtons &&
                         <>
                             <a href="/#" className="button button-resume">Resume</a>
                             <a href="/#/projects" className="button button-projects">Projects</a>
-                            <p> {` { Website in development } `} </p>
                         </>
                     }
                 </div>

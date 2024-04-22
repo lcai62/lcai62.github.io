@@ -18,7 +18,7 @@ function NavBar() {
                     <Nav.Link href="/#/about" className={`${getActiveClass("#/about")}`}><span className="highlight" >02</span> About</Nav.Link>
                     <Nav.Link href="/#/projects" className={`${getActiveClass("#/projects")}`}><span className="highlight">03</span> Projects</Nav.Link>
                     <Nav.Link href="mailto:leoncai@outlook.com"><span className="highlight">04</span> Contact</Nav.Link>
-                    <Nav.Link href="mailto:leoncai@outlook.com">leoncai@outlook.com</Nav.Link>
+                    <Nav.Link id="email" href="mailto:leoncai@outlook.com">leoncai@outlook.com</Nav.Link>
                 </Nav>
             </Container>
 

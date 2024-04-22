@@ -89,3 +89,16 @@
 .delayFadeIn {
     animation: delayFadeIn 2s ease-out;
 }
+
+@media screen and (max-width: 600px) {
+    #home-buttons-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .button-resume, .button-projects {
+        width: 100%;
+        text-align: center;
+    }
+}
