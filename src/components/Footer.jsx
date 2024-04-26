@@ -22,7 +22,7 @@ function Footer() {
             <Container fluid className="bg-black">
                 <div className="d-flex justify-content-center gap-3 mb-2">
                     <a className="footer-image" href="https://www.github.com/lcai62" target="_blank" rel="noreferrer"><img src={github} alt="github" style={{width: "25px", height: "25px"}}/></a>
-                    <a className="footer-image" href="https://www.linkedin.com/in/lcai62" target="_blank" rel="noreferrer"><img src={linkedin} alt="linkedin" style={{width: "25px", height: "25px"}}/></a>
+                    <a className="footer-image" href="https://www.linkedin.com/in/leoncai62" target="_blank" rel="noreferrer"><img src={linkedin} alt="linkedin" style={{width: "25px", height: "25px"}}/></a>
                     <a className="footer-image" href="mailto:leoncai@outlook.com"><img src={mail} alt="mail" style={{width: "25px", height: "25px"}}/></a>
                 </div>
                 <div className="footer-links d-flex flex-row justify-content-center pb-3 text-white bg-black">
