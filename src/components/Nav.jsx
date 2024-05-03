@@ -1,4 +1,3 @@
-import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -7,8 +6,10 @@ import './nav.css';
 function NavBar() {
 
     const getActiveClass = (path) => {
-        return window.location.hash === path ? 'active' : '';
+        const currentHash = window.location.hash || '#/';
+        return currentHash === path || (path === "#/" && currentHash === '') ? 'active' : '';
     }
+
 
     return (
         <Navbar className="justify-content-around bg-black" data-bs-theme="dark" >

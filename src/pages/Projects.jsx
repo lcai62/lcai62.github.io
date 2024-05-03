@@ -25,7 +25,7 @@ const Home = () => {
 
                 <h1 className="projects fadeIn" style={{ marginLeft: "10vw"}}>Projects</h1>
 
-                <div className="project-parent-container d-flex flex-column justify-content-start align-items-start gap-5 delayFadeIn"  style={{ marginLeft: "12vw"}}>
+                <div className="project-parent-container d-flex flex-column justify-content-start align-items-start delayFadeIn"  style={{ marginLeft: "12vw", gap: "100px"}}>
 
                     <Project
                         title="GPU-Accelerated Image Processing with CUDA"
@@ -50,6 +50,13 @@ const Home = () => {
                         date="May 2024"
                     />
 
+                    <Project
+                        title="PetPal: Pet Adoption Site"
+                        description={[
+                        ]}
+                        languages="Django, React, REST, PostgreSQL, Express.js, Node"
+                        date="December 2023"
+                    />
 
                     <Project
                         title="FUSE Filesystems: VSFS"
