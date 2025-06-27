@@ -1,109 +1,38 @@
-.intro {
-    font-weight: 640;
+
+
+html, body {
+    height: 100%;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    background-color: #000;
 }
 
-.highlight {
-    color: #FF9A3C;
+body::-webkit-scrollbar { display: none; }
+
+.snap-section {
+    scroll-snap-align: start;
+    min-height: 100vh;
+    position: relative;
+}
+
+.scrollable {
+    overflow-y: auto;
+    overscroll-behavior: contain;
+}
+
+#experience {
+    min-height: 100vh;
+    background-color: rgba(255, 255, 255, 0.05); /* for visibility */
+}
+
+.parallax-root {
+    perspective: 1200px;
+    perspective-origin: center;
+    overflow: visible; /* allow rotated content to peek out */
 }
 
 
-@keyframes blink {
-    0% {opacity: 1;}
-    50% {opacity: 0;}
-    100% {opacity: 1;}
-}
-
-.cursor {
-    animation: blink 1s infinite;
-    border-right: 4px solid white;
-    width: 0;
-    height: 4rem;
-    padding-left: 0.2rem;
-}
-
-.button {
-    border: none;
-    border-radius: 2rem;
-    font-size: 1.2rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    text-decoration: none;
-    letter-spacing: 0.2rem;
-}
-
-.button-resume {
-    background-color: #FF9A3C;
-    padding: 0.5rem 4rem;
-    color: black;
-    box-shadow: 0 0 0 2px #FF9A3C;
-    transition: 0.3s;
-}
-
-.button-projects {
-    background-color: black;
-    padding: 0.5rem 3rem;
-    color: #FF9A3C;
-    border: #FF9A3C 2px solid;
-    font-size: 1.1rem;
-}
-
-.button-resume:hover {
-    background-color: #bd6f20;
-    box-shadow: 0 0 0 2px #bd6f20;
-    transition: 0.3s;
-}
-
-.button-projects:hover {
-    border: #bd6f20 2px solid;
-    color: #bd6f20;
-    transition: 0.3s;
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(10px);
-    }
-    100% {
-        opacity: 1 !important;
-    }
-}
-
-.fadeIn {
-    animation: fadeIn 1s ease-out;
-}
-
-@keyframes delayFadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-
-    50% {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-
-    100% {
-        opacity: 1 !important;
-    }
-}
-
-.delayFadeIn {
-    animation: delayFadeIn 2s ease-out;
-}
-
-@media screen and (max-width: 600px) {
-    #home-buttons-container {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .button-resume, .button-projects {
-        width: 100%;
-        text-align: center;
-    }
-}

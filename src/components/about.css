@@ -1,0 +1,112 @@
+.about-container {
+    background-color: #111; /* dark background */
+    color: white;
+    padding: 3rem 4rem;
+    font-family: 'Inter', sans-serif;
+    max-width: 700px;
+    margin: auto;
+}
+
+.about-heading {
+    position: relative;
+    font-weight: 650;
+    background: linear-gradient(120deg, #ca8bff, #e88364, #ca8bff);
+    background-size: 200% 100% ;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    animation: gradientShift 3s ease infinite, shimmerText 2s ease-in-out infinite;
+}
+
+/* Gradient movement */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 200% 50%;
+    }
+}
+
+
+.about-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    color: #ddd;
+}
+
+.about-cards {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.about-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    flex: 1;
+    min-width: 240px;
+    background-color: #141414;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.about-card:hover {
+    transform: scale(1.02);
+    cursor: default;
+}
+
+.about-card.border-orange:hover {
+    box-shadow: 0 0 25px rgba(232, 131, 100, 0.5);
+    border-color: #ff9966;
+    color: #ff9966;
+    cursor: default;
+}
+
+
+.about-card.border-purple:hover {
+    box-shadow: 0 0 25px rgba(202, 139, 255, 0.5);
+    border-color: #dd99ff;
+    color: #dd99ff;
+    cursor: default;
+}
+
+.border-orange {
+    border-color: #e88364;
+}
+
+.border-purple {
+    border-color: #ca8bff;
+}
+
+.icon {
+    font-size: 1.5rem;
+}
+
+.orange {
+    color: #e88364;
+}
+
+.purple {
+    color: #ca8bff;
+}
+
+.closing-brace {
+    font-weight: 650;
+    color: #e88364;
+    margin-top: 1rem;
+}
+
+p {
+    margin-bottom: 0.2rem;
+}

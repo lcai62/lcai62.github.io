@@ -1,7 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react';
 import github from '../assets/github.png';  // Assuming the path is correct
 
-const Project = ({ title, description, languages, date }) => {
+const Project = ({ title, description, languages, date, codeLink }) => {
 
     const projectRef = useRef(null);
     const [isVisible, setIsVisible] = useState(false);
@@ -51,10 +51,19 @@ const Project = ({ title, description, languages, date }) => {
                                 ))}
                             </p>
 
-                            <div className="project-button-container d-flex flex-row ms-5">
-                                <hr className="vertical-line" />
-                                <a className="ms-5 projects-button projects-button-view">View Project</a>
-                            </div>
+                            {codeLink && (
+                                <div className="project-button-container d-flex flex-row ms-5">
+                                    <hr className="vertical-line" />
+                                    <a
+                                        className="ms-5 projects-button projects-button-view"
+                                        href={codeLink}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        View Project
+                                    </a>
+                                </div>
+                            )}
                         </div>
                     </div>
                 </div>

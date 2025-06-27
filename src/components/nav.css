@@ -1,37 +1,58 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 
-.nav-link, .navbar-brand {
+.site-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+.nav-link,
+.navbar-brand {
     font-family: "Inter", sans-serif;
-    font-size: 1rem;
-    color: white !important;
-    transition: color 0.3s;
+    font-size: 1.2rem;
+    color: #fff !important;
+
 }
 
-.nav-link:hover, .navbar-brand:hover {
-    opacity: 0.75;
-    transition: opacity 0.3s;
-}
-
-.nav-link.active > .highlight {
-    color: #ca8bff !important;
-    transition: color 0.3s;
-}
-
-.navbar {
-    padding-right: 1rem;
-    padding-left: 1rem;
-    padding-top: 1.2rem;
-    transition: color 0.3s;
-}
 
 .highlight {
-    color: #FF9A3C;
-    transition: color 0.3s;
+    color: #ff9a3c;
+
 }
 
 
-@media screen and (max-width: 768px) {
-    #email {
-        display: none;
+
+.nav-index {
+    color: #ff9a3c;
+}
+
+.nav-link.active .nav-index {
+    color: #CA8BFF;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.nav-link.active {
+    background: linear-gradient(to right, #CA8BFF, #E88364);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    animation: color 0.5s ;
+}
+
+.nav-divider {
+    height: 30px;
+    width: 2px;
+    background: #aaaaaa;
+    margin: 0 0.75rem;
+}
+
+@media (prefers-color-scheme: dark) {
+    .nav-divider {
+        background: #aaa;
     }
 }
+
+

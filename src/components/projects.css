@@ -1,0 +1,151 @@
+.projects-section {
+    background-color: #0a0a0a;
+    padding: 4rem 8vw;
+    color: white;
+}
+
+.section-title {
+    font-weight: 650;
+    padding-bottom: 2rem;
+    background: linear-gradient(to right, #CA8BFF, #E88364);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.projects-slider-wrapper {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.project-slide {
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.project-card {
+    background-color: #131313;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(200, 200, 255, 0.08);
+    border: 1px solid #2a2a2a;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.project-image {
+    height: 160px;
+    background-size: cover;
+    background-position: center;
+}
+
+.project-details {
+    padding: 1.25rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-details h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.project-details p {
+    font-size: 0.95rem;
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+
+.tech-stack {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.tech-pill {
+    background-color: #1e1e1e;
+    padding: 0.3rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    border: 1px solid #444;
+}
+
+.project-links {
+    margin-top: auto;
+    display: flex;
+    gap: 1rem;
+}
+
+.project-links a {
+    font-size: 0.85rem;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.live-link {
+    color: #ff69b4;
+}
+
+.code-link {
+    color: #00e5ff;
+}
+
+.closing-brace {
+    font-weight: 650;
+    color: #e88364;
+    margin-top: 1rem;
+}
+
+.custom-arrow {
+    z-index: 2 !important;
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    font-size: 2.5rem !important;
+    color: #ca8bff !important;
+    cursor: pointer !important;
+    user-select: none !important;
+    transition: color 0.3s ease !important;
+}
+
+.slick-prev::before {
+    display: none !important;
+}
+
+.slick-next::before {
+    display: none !important;
+}
+
+.custom-arrow:hover {
+    color: #e88364 !important;
+    transition: color 0.3s ease;
+}
+
+.left-arrow {
+    left: -60px !important;
+}
+
+.right-arrow {
+    right: -60px !important;
+}
+
+
+@media screen and (max-width: 768px) {
+    .custom-arrow {
+        font-size: 2rem;
+    }
+
+    .left-arrow {
+        left: -20px;
+    }
+
+    .right-arrow {
+        right: -20px;
+    }
+}
